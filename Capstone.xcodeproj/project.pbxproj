@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE52BF657610040D412 /* CapstoneApp.swift */; };
-		7EBE6CE82BF657610040D412 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE72BF657610040D412 /* ContentView.swift */; };
 		7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE92BF657630040D412 /* Assets.xcassets */; };
 		7EBE6CED2BF657630040D412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CEC2BF657630040D412 /* Preview Assets.xcassets */; };
 		7EBE6CEF2BF657630040D412 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CEE2BF657630040D412 /* Persistence.swift */; };
@@ -16,6 +15,11 @@
 		7EBE6CFC2BF657630040D412 /* CapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CFB2BF657630040D412 /* CapstoneTests.swift */; };
 		7EBE6D062BF657630040D412 /* CapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D052BF657630040D412 /* CapstoneUITests.swift */; };
 		7EBE6D082BF657630040D412 /* CapstoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D072BF657630040D412 /* CapstoneUITestsLaunchTests.swift */; };
+		7EBE6D152C0133FB0040D412 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D142C0133FB0040D412 /* Onboarding.swift */; };
+		7EBE6D172C0A86D20040D412 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6D162C0A86D10040D412 /* Colors.xcassets */; };
+		7EBE6D192C0A87480040D412 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6D182C0A87480040D412 /* Images.xcassets */; };
+		7EBE6D1C2C0A87CA0040D412 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D1B2C0A87CA0040D412 /* Images.swift */; };
+		7EBE6D1E2C0A8D9D0040D412 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D1D2C0A8D9D0040D412 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 /* Begin PBXFileReference section */
 		7EBE6CE22BF657610040D412 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE6CE52BF657610040D412 /* CapstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneApp.swift; sourceTree = "<group>"; };
-		7EBE6CE72BF657610040D412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7EBE6CE92BF657630040D412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EBE6CEC2BF657630040D412 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7EBE6CEE2BF657630040D412 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +51,11 @@
 		7EBE6D012BF657630040D412 /* CapstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE6D052BF657630040D412 /* CapstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneUITests.swift; sourceTree = "<group>"; };
 		7EBE6D072BF657630040D412 /* CapstoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7EBE6D142C0133FB0040D412 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		7EBE6D162C0A86D10040D412 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7EBE6D182C0A87480040D412 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7EBE6D1B2C0A87CA0040D412 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		7EBE6D1D2C0A8D9D0040D412 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +106,15 @@
 		7EBE6CE42BF657610040D412 /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE6D1A2C0A87BF0040D412 /* UI */,
 				7EBE6CE52BF657610040D412 /* CapstoneApp.swift */,
-				7EBE6CE72BF657610040D412 /* ContentView.swift */,
 				7EBE6CE92BF657630040D412 /* Assets.xcassets */,
 				7EBE6CEE2BF657630040D412 /* Persistence.swift */,
 				7EBE6CF02BF657630040D412 /* Capstone.xcdatamodeld */,
 				7EBE6CEB2BF657630040D412 /* Preview Content */,
+				7EBE6D142C0133FB0040D412 /* Onboarding.swift */,
+				7EBE6D162C0A86D10040D412 /* Colors.xcassets */,
+				7EBE6D182C0A87480040D412 /* Images.xcassets */,
 			);
 			path = Capstone;
 			sourceTree = "<group>";
@@ -131,6 +142,15 @@
 				7EBE6D072BF657630040D412 /* CapstoneUITestsLaunchTests.swift */,
 			);
 			path = CapstoneUITests;
+			sourceTree = "<group>";
+		};
+		7EBE6D1A2C0A87BF0040D412 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE6D1B2C0A87CA0040D412 /* Images.swift */,
+				7EBE6D1D2C0A8D9D0040D412 /* Colors.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBE6D172C0A86D20040D412 /* Colors.xcassets in Resources */,
+				7EBE6D192C0A87480040D412 /* Images.xcassets in Resources */,
 				7EBE6CED2BF657630040D412 /* Preview Assets.xcassets in Resources */,
 				7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */,
 			);
@@ -264,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBE6CEF2BF657630040D412 /* Persistence.swift in Sources */,
-				7EBE6CE82BF657610040D412 /* ContentView.swift in Sources */,
+				7EBE6D1E2C0A8D9D0040D412 /* Colors.swift in Sources */,
+				7EBE6D152C0133FB0040D412 /* Onboarding.swift in Sources */,
+				7EBE6D1C2C0A87CA0040D412 /* Images.swift in Sources */,
 				7EBE6CF22BF657630040D412 /* Capstone.xcdatamodeld in Sources */,
 				7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */,
 			);
