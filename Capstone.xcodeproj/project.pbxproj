@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E48C9FC2C111F860090CA2A /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48C9FB2C111F860090CA2A /* Text+Extensions.swift */; };
+		7E48CA032C1122650090CA2A /* MarkaziText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48C9FE2C1122640090CA2A /* MarkaziText-SemiBold.ttf */; };
+		7E48CA042C1122650090CA2A /* MarkaziText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48C9FF2C1122640090CA2A /* MarkaziText-Bold.ttf */; };
+		7E48CA052C1122650090CA2A /* MarkaziText-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA002C1122650090CA2A /* MarkaziText-VF.ttf */; };
+		7E48CA062C1122650090CA2A /* MarkaziText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA012C1122650090CA2A /* MarkaziText-Regular.ttf */; };
+		7E48CA072C1122650090CA2A /* MarkaziText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA022C1122650090CA2A /* MarkaziText-Medium.ttf */; };
+		7E48CA0B2C1124980090CA2A /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA092C1124980090CA2A /* Karla-Bold.ttf */; };
+		7E48CA0C2C1124980090CA2A /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA0A2C1124980090CA2A /* Karla-Regular.ttf */; };
 		7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE52BF657610040D412 /* CapstoneApp.swift */; };
 		7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE92BF657630040D412 /* Assets.xcassets */; };
 		7EBE6CED2BF657630040D412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CEC2BF657630040D412 /* Preview Assets.xcassets */; };
@@ -22,6 +30,7 @@
 		7EBE6D1E2C0A8D9D0040D412 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D1D2C0A8D9D0040D412 /* Colors.swift */; };
 		7EBE6D202C0F97E90040D412 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D1F2C0F97E90040D412 /* Home.swift */; };
 		7EBE6D222C0F98170040D412 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D212C0F98160040D412 /* Menu.swift */; };
+		7EBE6D242C1019F30040D412 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D232C1019F30040D412 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E48C9FB2C111F860090CA2A /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
+		7E48C9FE2C1122640090CA2A /* MarkaziText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-SemiBold.ttf"; sourceTree = "<group>"; };
+		7E48C9FF2C1122640090CA2A /* MarkaziText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Bold.ttf"; sourceTree = "<group>"; };
+		7E48CA002C1122650090CA2A /* MarkaziText-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-VF.ttf"; sourceTree = "<group>"; };
+		7E48CA012C1122650090CA2A /* MarkaziText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Regular.ttf"; sourceTree = "<group>"; };
+		7E48CA022C1122650090CA2A /* MarkaziText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Medium.ttf"; sourceTree = "<group>"; };
+		7E48CA082C1123A40090CA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7E48CA092C1124980090CA2A /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		7E48CA0A2C1124980090CA2A /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		7EBE6CE22BF657610040D412 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE6CE52BF657610040D412 /* CapstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneApp.swift; sourceTree = "<group>"; };
 		7EBE6CE92BF657630040D412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +78,7 @@
 		7EBE6D1D2C0A8D9D0040D412 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7EBE6D1F2C0F97E90040D412 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7EBE6D212C0F98160040D412 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		7EBE6D232C1019F30040D412 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +106,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E48C9FD2C1122540090CA2A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7E48C9FF2C1122640090CA2A /* MarkaziText-Bold.ttf */,
+				7E48CA022C1122650090CA2A /* MarkaziText-Medium.ttf */,
+				7E48CA092C1124980090CA2A /* Karla-Bold.ttf */,
+				7E48CA0A2C1124980090CA2A /* Karla-Regular.ttf */,
+				7E48CA012C1122650090CA2A /* MarkaziText-Regular.ttf */,
+				7E48C9FE2C1122640090CA2A /* MarkaziText-SemiBold.ttf */,
+				7E48CA002C1122650090CA2A /* MarkaziText-VF.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7EBE6CD92BF657610040D412 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +143,7 @@
 		7EBE6CE42BF657610040D412 /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				7E48CA082C1123A40090CA2A /* Info.plist */,
 				7EBE6D1A2C0A87BF0040D412 /* UI */,
 				7EBE6CE52BF657610040D412 /* CapstoneApp.swift */,
 				7EBE6CE92BF657630040D412 /* Assets.xcassets */,
@@ -121,6 +155,7 @@
 				7EBE6D182C0A87480040D412 /* Images.xcassets */,
 				7EBE6D1F2C0F97E90040D412 /* Home.swift */,
 				7EBE6D212C0F98160040D412 /* Menu.swift */,
+				7EBE6D232C1019F30040D412 /* UserProfile.swift */,
 			);
 			path = Capstone;
 			sourceTree = "<group>";
@@ -153,8 +188,10 @@
 		7EBE6D1A2C0A87BF0040D412 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7E48C9FD2C1122540090CA2A /* Fonts */,
 				7EBE6D1B2C0A87CA0040D412 /* Images.swift */,
 				7EBE6D1D2C0A8D9D0040D412 /* Colors.swift */,
+				7E48C9FB2C111F860090CA2A /* Text+Extensions.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -263,9 +300,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E48CA0C2C1124980090CA2A /* Karla-Regular.ttf in Resources */,
+				7E48CA072C1122650090CA2A /* MarkaziText-Medium.ttf in Resources */,
+				7E48CA0B2C1124980090CA2A /* Karla-Bold.ttf in Resources */,
+				7E48CA052C1122650090CA2A /* MarkaziText-VF.ttf in Resources */,
 				7EBE6D172C0A86D20040D412 /* Colors.xcassets in Resources */,
 				7EBE6D192C0A87480040D412 /* Images.xcassets in Resources */,
+				7E48CA042C1122650090CA2A /* MarkaziText-Bold.ttf in Resources */,
 				7EBE6CED2BF657630040D412 /* Preview Assets.xcassets in Resources */,
+				7E48CA032C1122650090CA2A /* MarkaziText-SemiBold.ttf in Resources */,
+				7E48CA062C1122650090CA2A /* MarkaziText-Regular.ttf in Resources */,
 				7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,10 +339,12 @@
 				7EBE6D1E2C0A8D9D0040D412 /* Colors.swift in Sources */,
 				7EBE6D222C0F98170040D412 /* Menu.swift in Sources */,
 				7EBE6D152C0133FB0040D412 /* Onboarding.swift in Sources */,
+				7E48C9FC2C111F860090CA2A /* Text+Extensions.swift in Sources */,
 				7EBE6D1C2C0A87CA0040D412 /* Images.swift in Sources */,
 				7EBE6CF22BF657630040D412 /* Capstone.xcdatamodeld in Sources */,
 				7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */,
 				7EBE6D202C0F97E90040D412 /* Home.swift in Sources */,
+				7EBE6D242C1019F30040D412 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +510,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Capstone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Capstone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -492,6 +539,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Capstone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Capstone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

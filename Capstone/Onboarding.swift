@@ -12,6 +12,7 @@ let kLastName = "last name key"
 let kEmail = "email key"
 
 struct Onboarding: View {
+    static let kIsLoggedIn = "kIsLoggedIn"
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var email = ""
@@ -39,6 +40,7 @@ struct Onboarding: View {
                             UserDefaults.standard.set(firstName, forKey: kFirstName)
                             UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
+                            UserDefaults.standard.set(true, forKey: Self.kIsLoggedIn)
                             isLoggedIn = true
                         }
                     } label: {
@@ -52,6 +54,11 @@ struct Onboarding: View {
                     }
                     .navigationDestination(isPresented: $isLoggedIn) {
                         Home()
+                    }
+                }
+                .onAppear {
+                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
+                        isLoggedIn = true
                     }
                 }
                 .padding(50)

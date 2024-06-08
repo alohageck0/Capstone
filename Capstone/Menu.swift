@@ -11,8 +11,10 @@ struct Menu: View {
     var body: some View {
         VStack {
             Text("LittleLemon")
+                .display()
             Text("Chicago")
-            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")            
+                .sectionTitle()
+            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
         }
     }
 }
