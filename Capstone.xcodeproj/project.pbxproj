@@ -15,10 +15,15 @@
 		7E48CA072C1122650090CA2A /* MarkaziText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA022C1122650090CA2A /* MarkaziText-Medium.ttf */; };
 		7E48CA0B2C1124980090CA2A /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA092C1124980090CA2A /* Karla-Bold.ttf */; };
 		7E48CA0C2C1124980090CA2A /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E48CA0A2C1124980090CA2A /* Karla-Regular.ttf */; };
+		7E48CA102C17F6870090CA2A /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA0E2C17F6870090CA2A /* FetchedObjects.swift */; };
+		7E48CA112C17F6870090CA2A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA0F2C17F6870090CA2A /* Persistence.swift */; };
+		7E48CA132C17F7160090CA2A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA122C17F7160090CA2A /* DataModel.swift */; };
+		7E48CA162C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA142C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld */; };
+		7E48CA192C17FEC30090CA2A /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA172C17FEC30090CA2A /* Dish+CoreDataClass.swift */; };
+		7E48CA1A2C17FEC30090CA2A /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA182C17FEC30090CA2A /* Dish+CoreDataProperties.swift */; };
 		7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE52BF657610040D412 /* CapstoneApp.swift */; };
 		7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE92BF657630040D412 /* Assets.xcassets */; };
 		7EBE6CED2BF657630040D412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CEC2BF657630040D412 /* Preview Assets.xcassets */; };
-		7EBE6CEF2BF657630040D412 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CEE2BF657630040D412 /* Persistence.swift */; };
 		7EBE6CF22BF657630040D412 /* Capstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CF02BF657630040D412 /* Capstone.xcdatamodeld */; };
 		7EBE6CFC2BF657630040D412 /* CapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CFB2BF657630040D412 /* CapstoneTests.swift */; };
 		7EBE6D062BF657630040D412 /* CapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D052BF657630040D412 /* CapstoneUITests.swift */; };
@@ -60,11 +65,16 @@
 		7E48CA082C1123A40090CA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7E48CA092C1124980090CA2A /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
 		7E48CA0A2C1124980090CA2A /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		7E48CA0E2C17F6870090CA2A /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		7E48CA0F2C17F6870090CA2A /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7E48CA122C17F7160090CA2A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		7E48CA152C17FC4D0090CA2A /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		7E48CA172C17FEC30090CA2A /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataClass.swift"; path = "Capstone/Data/Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7E48CA182C17FEC30090CA2A /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataProperties.swift"; path = "Capstone/Data/Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7EBE6CE22BF657610040D412 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE6CE52BF657610040D412 /* CapstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneApp.swift; sourceTree = "<group>"; };
 		7EBE6CE92BF657630040D412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EBE6CEC2BF657630040D412 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7EBE6CEE2BF657630040D412 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7EBE6CF12BF657630040D412 /* Capstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capstone.xcdatamodel; sourceTree = "<group>"; };
 		7EBE6CF72BF657630040D412 /* CapstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE6CFB2BF657630040D412 /* CapstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneTests.swift; sourceTree = "<group>"; };
@@ -120,9 +130,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		7E48CA0D2C17F67D0090CA2A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7E48CA0E2C17F6870090CA2A /* FetchedObjects.swift */,
+				7E48CA0F2C17F6870090CA2A /* Persistence.swift */,
+				7E48CA122C17F7160090CA2A /* DataModel.swift */,
+				7E48CA142C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		7EBE6CD92BF657610040D412 = {
 			isa = PBXGroup;
 			children = (
+				7E48CA172C17FEC30090CA2A /* Dish+CoreDataClass.swift */,
+				7E48CA182C17FEC30090CA2A /* Dish+CoreDataProperties.swift */,
 				7EBE6CE42BF657610040D412 /* Capstone */,
 				7EBE6CFA2BF657630040D412 /* CapstoneTests */,
 				7EBE6D042BF657630040D412 /* CapstoneUITests */,
@@ -143,11 +166,11 @@
 		7EBE6CE42BF657610040D412 /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				7E48CA0D2C17F67D0090CA2A /* Data */,
 				7E48CA082C1123A40090CA2A /* Info.plist */,
 				7EBE6D1A2C0A87BF0040D412 /* UI */,
 				7EBE6CE52BF657610040D412 /* CapstoneApp.swift */,
 				7EBE6CE92BF657630040D412 /* Assets.xcassets */,
-				7EBE6CEE2BF657630040D412 /* Persistence.swift */,
 				7EBE6CF02BF657630040D412 /* Capstone.xcdatamodeld */,
 				7EBE6CEB2BF657630040D412 /* Preview Content */,
 				7EBE6D142C0133FB0040D412 /* Onboarding.swift */,
@@ -335,16 +358,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EBE6CEF2BF657630040D412 /* Persistence.swift in Sources */,
 				7EBE6D1E2C0A8D9D0040D412 /* Colors.swift in Sources */,
 				7EBE6D222C0F98170040D412 /* Menu.swift in Sources */,
+				7E48CA192C17FEC30090CA2A /* Dish+CoreDataClass.swift in Sources */,
+				7E48CA1A2C17FEC30090CA2A /* Dish+CoreDataProperties.swift in Sources */,
 				7EBE6D152C0133FB0040D412 /* Onboarding.swift in Sources */,
 				7E48C9FC2C111F860090CA2A /* Text+Extensions.swift in Sources */,
 				7EBE6D1C2C0A87CA0040D412 /* Images.swift in Sources */,
 				7EBE6CF22BF657630040D412 /* Capstone.xcdatamodeld in Sources */,
 				7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */,
+				7E48CA132C17F7160090CA2A /* DataModel.swift in Sources */,
 				7EBE6D202C0F97E90040D412 /* Home.swift in Sources */,
+				7E48CA112C17F6870090CA2A /* Persistence.swift in Sources */,
+				7E48CA102C17F6870090CA2A /* FetchedObjects.swift in Sources */,
 				7EBE6D242C1019F30040D412 /* UserProfile.swift in Sources */,
+				7E48CA162C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +700,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		7E48CA142C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7E48CA152C17FC4D0090CA2A /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = 7E48CA152C17FC4D0090CA2A /* ExampleDatabase.xcdatamodel */;
+			name = ExampleDatabase.xcdatamodeld;
+			path = /Users/evgenii/git/Capstone/Capstone/Data/ExampleDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		7EBE6CF02BF657630040D412 /* Capstone.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
