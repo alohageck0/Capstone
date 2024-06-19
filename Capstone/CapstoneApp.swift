@@ -13,7 +13,7 @@ struct CapstoneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Onboarding()
+            SelectNameView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
