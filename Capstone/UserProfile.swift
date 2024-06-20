@@ -17,38 +17,48 @@ struct UserProfile: View {
     var body: some View {
         VStack {
             Text("Personal information")
-                .regular()
-                .foregroundStyle(.secondary_black)
-            Image.profile
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200)
-            Text(firstName)
                 .sectionTitle()
                 .foregroundStyle(.secondary_black)
-            Text(lastName)
-                .sectionTitle()
-                .foregroundStyle(.secondary_black)
-            Text(email)
-                .sectionTitle()
-                .foregroundStyle(.secondary_black)
+                .padding(.bottom, 10)
+            UserInfoField(title: "First name:", text: firstName)
+            UserInfoField(title: "Last name:", text: lastName)
+            UserInfoField(title: "Email:", text: email)
+            
+            Spacer()
             Button {
+                UserDefaults.resetStandardUserDefaults()
                 UserDefaults.standard.set(false, forKey: Onboarding.kIsLoggedIn)
                 self.presentation.wrappedValue.dismiss()
             } label: {
                 Text("Logout")
-                    .foregroundStyle(.secondary_white)
+                    .foregroundStyle(.secondary_black)
                     .padding(5)
-                    .background(.primary_green)
+                    .background(.primary_yellow)
                     .clipShape(
                         RoundedRectangle(cornerRadius: 5)
                     )
             }
+        }
+        .padding(25)
+    }
+}
+
+struct UserInfoField: View {
+    let title: String
+    let text: String
+    
+    var body: some View {
+        HStack {
+            Text(title)
+                .paragraph()
+                .foregroundStyle(.secondary_black)
+            Text(text)
+                .paragraph()
+                .foregroundStyle(.secondary_black)
             Spacer()
         }
     }
 }
-
 #Preview {
     UserProfile()
 }

@@ -26,7 +26,7 @@ struct Menu: View {
             FetchedObjects(
                 predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List {
-                    ForEach(dishes, id: \.id) { dish in
+                    ForEach(dishes) { dish in
                         HStack {
                             Text(dish.title ?? "")
                             AsyncImage(url: URL(string: dish.image ?? "")) { image in
@@ -50,19 +50,12 @@ struct Menu: View {
         let urlString = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
-        var result = URLSession.shared.dataTask(with: request) { data,_,_ in
+        URLSession.shared.dataTask(with: request) { data,_,_ in
             if let data = data {
                 let decoder = JSONDecoder()
                 let dataObj = try? decoder.decode(JSONMenu.self, from: data)
                 if let menuList = dataObj {
-                    for item in menuList.menu {
-                        let dish = Dish(context: viewContext)
-                        dish.image = item.image
-                        dish.price = item.price
-                        dish.title = item.title
-                        
-                    }
-                    try? viewContext.save()
+                    Dish.createDishesFrom(menuItems: menuList.menu, viewContext)
                 }
             }
         }.resume()

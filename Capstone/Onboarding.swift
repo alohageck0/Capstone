@@ -25,7 +25,7 @@ struct Onboarding: View {
                 
                 VStack {
                     Image.logo
-                        .padding(.top, 100)
+                        .padding(.top, 80)
                     Spacer()
                 }
                 VStack {

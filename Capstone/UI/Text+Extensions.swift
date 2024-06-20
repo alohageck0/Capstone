@@ -26,6 +26,10 @@ public extension Text {
     func sectionTitle() -> some View {
         return customStyle(name: Font.Karla.regular, size: 20, weight: .bold)
     }
+    
+    func paragraph() -> some View {
+        return customStyle(name: Font.Karla.regular, size: 16, weight: .regular)
+    }
 }
 
 public extension Font {
