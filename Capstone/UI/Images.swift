@@ -16,6 +16,7 @@ public let bundle = Bundle(for: BundleIdentifier.self)
 public extension Image {
     static let logo = Image("Logo", bundle: bundle)
     static let profile = Image("Profile", bundle: bundle)
+    static let restaurant = Image("Restaurant", bundle: bundle)
 }
 
 //public extension UIImage {

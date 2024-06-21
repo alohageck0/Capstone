@@ -13,15 +13,33 @@ struct Menu: View {
     
     var body: some View {
         VStack {
-            Text("LittleLemon")
-                .display()
-            Text("Chicago")
-                .sectionTitle()
-            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
-            
-            TextField("Search text", text: $searchText)
-                .textFieldStyle(.roundedBorder)
-                .padding(.horizontal, 50)
+            VStack(alignment: .leading, spacing: 0) {
+                Text("Little Lemon")
+                    .display()
+                    .foregroundColor(.primary_yellow)
+                    .padding(.horizontal, 25)
+                HStack(spacing: 0) {
+                    VStack(alignment: .leading) {
+                        Text("Chicago")
+                            .regular()
+                        Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
+                            .paragraph()
+                    }
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 25)
+                    Image.restaurant
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 150, alignment: .center) //  <<: Here
+                        .cornerRadius(20)
+                        .clipped()
+                        .padding(.trailing, 25)
+                }
+                TextField("Search dish", text: $searchText)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(25)
+            }
+            .background(Color.primary_green)
             
             FetchedObjects(
                 predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
