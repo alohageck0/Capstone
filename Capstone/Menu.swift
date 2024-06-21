@@ -13,49 +13,62 @@ struct Menu: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Little Lemon")
-                    .display()
-                    .foregroundColor(.primary_yellow)
-                    .padding(.horizontal, 25)
-                HStack(spacing: 0) {
-                    VStack(alignment: .leading) {
+            ZStack {
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Little Lemon")
+                        .display()
+                        .foregroundColor(.primary_yellow)
+                        .padding(.horizontal, 25)
+                    HStack(spacing: 0) {
+                        VStack(alignment: .leading) {
+                            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
+                                .paragraph()
+                                .padding(.top, 40)
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 25)
+                        .frame(height: 170)
+                        Image.restaurant
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 150, alignment: .center) //  <<: Here
+                            .cornerRadius(20)
+                            .clipped()
+                            .padding(.trailing, 25)
+                    }
+                    TextField("Search dish", text: $searchText)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(25)
+                }
+                .background(Color.primary_green)
+                VStack {
+                    HStack(spacing: 0) {
                         Text("Chicago")
                             .regular()
-                        Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
-                            .paragraph()
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 25)
+                        Spacer()
                     }
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 25)
-                    Image.restaurant
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 150, height: 150, alignment: .center) //  <<: Here
-                        .cornerRadius(20)
-                        .clipped()
-                        .padding(.trailing, 25)
+                    .padding(.top, 55)
+                    Spacer()
                 }
-                TextField("Search dish", text: $searchText)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(25)
             }
-            .background(Color.primary_green)
+            MenuBreakdownView()
+                .padding(.horizontal, 25)
             
             FetchedObjects(
                 predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List {
                     ForEach(dishes) { dish in
-                        HStack {
-                            Text(dish.title ?? "")
-                            AsyncImage(url: URL(string: dish.image ?? "")) { image in
-                                image.resizable()
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            .frame(width: 50, height: 50)
-                        }
+                        MenuItemView(dish: dish)
+                            .padding(.bottom, 10)
+                            .listRowInsets(EdgeInsets())
                     }
                 }
+                .listStyle(PlainListStyle())
+                .padding(.horizontal, 25)
+                .scrollContentBackground(.hidden)
+                .scrollIndicators(.hidden)
             }
         }
         .onAppear {
@@ -93,6 +106,79 @@ struct Menu: View {
             return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
         }
         
+    }
+}
+
+struct MenuBreakdownView: View {
+    private var menuCategories = ["Starters", "Mains", "Desserts", "Drinks"]
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("ORDER FOR DELIVERY!")
+                    .sectionTitle()
+                    .padding(.top, 25)
+                Spacer()
+            }
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                  CategoryView(title: "Starters")
+                  CategoryView(title: "Mains")
+                  CategoryView(title: "Desserts")
+                  CategoryView(title: "Drinks")
+                }
+            }
+            Divider()
+                .padding(.top, 15)
+        }
+    }
+}
+
+struct CategoryView: View {
+    let title: String
+    
+    var body: some View {
+        Text(title)
+            .sectionCategory()
+            .foregroundColor(.primary_green)
+            .padding(.vertical, 5)
+            .padding(.horizontal, 10)
+            .background(.secondary_white)
+            .clipShape(
+                RoundedRectangle(cornerRadius: 10)
+            )
+    }
+}
+
+struct MenuItemView: View {
+    let dish: Dish
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(dish.title ?? "")
+                .sectionTitle()
+            HStack(spacing: 0) {
+                VStack(alignment: .leading) {
+                    Text(dish.itemDescription ?? "Empty description")
+                        .paragraph()
+                        
+                    Text("$\(dish.price ?? "0").00" )
+                        .highlight()
+                        .padding(.top, 5)
+                }
+                .foregroundColor(.primary_green)
+                Spacer()
+                AsyncImage(url: URL(string: dish.image ?? "")) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .clipped()
+                } placeholder: {
+                    ProgressView()
+                }
+            }
+        }
     }
 }
 

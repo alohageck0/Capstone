@@ -2,7 +2,7 @@
 //  Dish+CoreDataClass.swift
 //  Capstone
 //
-//  Created by Evgenii Iavorovich on 6/10/24.
+//  Created by Evgenii Iavorovich on 6/21/24.
 //
 //
 

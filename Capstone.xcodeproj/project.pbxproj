@@ -19,8 +19,6 @@
 		7E48CA112C17F6870090CA2A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA0F2C17F6870090CA2A /* Persistence.swift */; };
 		7E48CA132C17F7160090CA2A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA122C17F7160090CA2A /* DataModel.swift */; };
 		7E48CA162C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA142C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld */; };
-		7E48CA192C17FEC30090CA2A /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA172C17FEC30090CA2A /* Dish+CoreDataClass.swift */; };
-		7E48CA1A2C17FEC30090CA2A /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E48CA182C17FEC30090CA2A /* Dish+CoreDataProperties.swift */; };
 		7EBE6CE62BF657610040D412 /* CapstoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE52BF657610040D412 /* CapstoneApp.swift */; };
 		7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CE92BF657630040D412 /* Assets.xcassets */; };
 		7EBE6CED2BF657630040D412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE6CEC2BF657630040D412 /* Preview Assets.xcassets */; };
@@ -38,6 +36,8 @@
 		7EBE6D242C1019F30040D412 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6D232C1019F30040D412 /* UserProfile.swift */; };
 		7EFEF0892C1BB6C3003E0D59 /* SelectNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF0882C1BB6C3003E0D59 /* SelectNameView.swift */; };
 		7EFEF08B2C1BB751003E0D59 /* SelectEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF08A2C1BB751003E0D59 /* SelectEmailView.swift */; };
+		7EFEF0922C262D59003E0D59 /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */; };
+		7EFEF0932C262D59003E0D59 /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +71,6 @@
 		7E48CA0F2C17F6870090CA2A /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7E48CA122C17F7160090CA2A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		7E48CA152C17FC4D0090CA2A /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
-		7E48CA172C17FEC30090CA2A /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataClass.swift"; path = "Capstone/Data/Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7E48CA182C17FEC30090CA2A /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataProperties.swift"; path = "Capstone/Data/Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7EBE6CE22BF657610040D412 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE6CE52BF657610040D412 /* CapstoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneApp.swift; sourceTree = "<group>"; };
 		7EBE6CE92BF657630040D412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +91,8 @@
 		7EBE6D232C1019F30040D412 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7EFEF0882C1BB6C3003E0D59 /* SelectNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNameView.swift; sourceTree = "<group>"; };
 		7EFEF08A2C1BB751003E0D59 /* SelectEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmailView.swift; sourceTree = "<group>"; };
+		7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataClass.swift"; path = "Capstone/Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataProperties.swift"; path = "Capstone/Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,8 @@
 		7EBE6CD92BF657610040D412 = {
 			isa = PBXGroup;
 			children = (
-				7E48CA172C17FEC30090CA2A /* Dish+CoreDataClass.swift */,
-				7E48CA182C17FEC30090CA2A /* Dish+CoreDataProperties.swift */,
+				7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */,
+				7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */,
 				7EBE6CE42BF657610040D412 /* Capstone */,
 				7EBE6CFA2BF657630040D412 /* CapstoneTests */,
 				7EBE6D042BF657630040D412 /* CapstoneUITests */,
@@ -367,8 +367,6 @@
 				7EBE6D1E2C0A8D9D0040D412 /* Colors.swift in Sources */,
 				7EBE6D222C0F98170040D412 /* Menu.swift in Sources */,
 				7EFEF08B2C1BB751003E0D59 /* SelectEmailView.swift in Sources */,
-				7E48CA192C17FEC30090CA2A /* Dish+CoreDataClass.swift in Sources */,
-				7E48CA1A2C17FEC30090CA2A /* Dish+CoreDataProperties.swift in Sources */,
 				7EBE6D152C0133FB0040D412 /* Onboarding.swift in Sources */,
 				7E48C9FC2C111F860090CA2A /* Text+Extensions.swift in Sources */,
 				7EBE6D1C2C0A87CA0040D412 /* Images.swift in Sources */,
@@ -378,6 +376,8 @@
 				7EBE6D202C0F97E90040D412 /* Home.swift in Sources */,
 				7EFEF0892C1BB6C3003E0D59 /* SelectNameView.swift in Sources */,
 				7E48CA112C17F6870090CA2A /* Persistence.swift in Sources */,
+				7EFEF0922C262D59003E0D59 /* Dish+CoreDataClass.swift in Sources */,
+				7EFEF0932C262D59003E0D59 /* Dish+CoreDataProperties.swift in Sources */,
 				7E48CA102C17F6870090CA2A /* FetchedObjects.swift in Sources */,
 				7EBE6D242C1019F30040D412 /* UserProfile.swift in Sources */,
 				7E48CA162C17FC4D0090CA2A /* ExampleDatabase.xcdatamodeld in Sources */,

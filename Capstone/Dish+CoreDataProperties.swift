@@ -2,7 +2,7 @@
 //  Dish+CoreDataProperties.swift
 //  Capstone
 //
-//  Created by Evgenii Iavorovich on 6/18/24.
+//  Created by Evgenii Iavorovich on 6/21/24.
 //
 //
 
@@ -20,6 +20,7 @@ extension Dish {
     @NSManaged public var price: String?
     @NSManaged public var title: String?
     @NSManaged public var uuid: UUID?
+    @NSManaged public var itemDescription: String?
 
     static func createDishesFrom(menuItems:[MenuItem], _ context: NSManagedObjectContext) {
         for menuItem in menuItems {
@@ -28,6 +29,7 @@ extension Dish {
                 oneDish.title = menuItem.title
                 oneDish.price = menuItem.price
                 oneDish.image = menuItem.image
+                oneDish.itemDescription = menuItem.description
             }
         }
     }
@@ -59,5 +61,5 @@ extension Dish {
 }
 
 extension Dish : Identifiable {
-
+    
 }
