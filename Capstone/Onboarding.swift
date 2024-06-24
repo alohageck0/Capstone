@@ -16,18 +16,18 @@ struct Onboarding: View {
     private let firstName = UserDefaults.standard.object(forKey: kFirstName) as? String ?? "Empty first name"
     private let lastName = UserDefaults.standard.object(forKey: kLastName) as? String ?? "Empty last name"
     private let email = UserDefaults.standard.object(forKey: kEmail) as? String ?? "Empty email"
-    @State private var isLoggedIn = false
+    @Binding var isLoggedIn: Bool
     
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.secondary_white
-                
-                VStack {
-                    Image.logo
-                        .padding(.top, 80)
-                    Spacer()
-                }
+//                Color.secondary_white
+//                
+//                VStack {
+//                    Image.logo
+//                        .padding(.top, 80)
+//                    Spacer()
+//                }
                 VStack {
 //                    TextField("First Name", text: $firstName)
 //                        .textFieldStyle(.roundedBorder)
@@ -36,6 +36,7 @@ struct Onboarding: View {
 //                    TextField("Email", text: $email)
 //                        .textFieldStyle(.roundedBorder)
                     Text("Review your input")
+                        .sectionCategory()
                     Text(firstName)
                         .sectionTitle()
                         .foregroundStyle(.secondary_black)
@@ -66,11 +67,11 @@ struct Onboarding: View {
                         Home()
                     }
                 }
-                .onAppear {
-                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
-                        isLoggedIn = true
-                    }
-                }
+//                .onAppear {
+//                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
+//                        isLoggedIn = true
+//                    }
+//                }
                 .padding(50)
             }
             .ignoresSafeArea()
@@ -79,5 +80,5 @@ struct Onboarding: View {
 }
 
 #Preview {
-    Onboarding()
+    Onboarding(isLoggedIn: .constant(false))
 }

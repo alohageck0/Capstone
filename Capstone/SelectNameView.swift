@@ -17,32 +17,27 @@ struct SelectNameView: View {
     @State private var lastName = ""
     @State private var email = ""
     @State private var isLoggedIn = false
+    @State private var canContinue = false
     
     var body: some View {
+        TitleView(isLoggedIn: $isLoggedIn)
+            .frame(height: 50)
         NavigationStack {
             ZStack {
-                Color.secondary_white
-                
-                VStack {
-                    Image.logo
-                        .padding(.top, 100)
-                    Spacer()
-                }
                 VStack {
                     Text("What's your name?")
+                        .sectionCategory()
                     TextField("First Name", text: $firstName)
                         .textFieldStyle(.roundedBorder)
                     TextField("Last Name", text: $lastName)
                         .textFieldStyle(.roundedBorder)
-//                    TextField("Email", text: $email)
-//                        .textFieldStyle(.roundedBorder)
                     Button {
                         if !firstName.isEmpty && !lastName.isEmpty {
                             UserDefaults.standard.set(firstName, forKey: kFirstName)
                             UserDefaults.standard.set(lastName, forKey: kLastName)
 //                            UserDefaults.standard.set(email, forKey: kEmail)
 //                            UserDefaults.standard.set(true, forKey: Self.kIsLoggedIn)
-                            isLoggedIn = true
+                            canContinue = true
                         }
                     } label: {
                         Text("Next")
@@ -53,22 +48,43 @@ struct SelectNameView: View {
                                 RoundedRectangle(cornerRadius: 5)
                             )
                     }
-                    .navigationDestination(isPresented: $isLoggedIn) {
-                        SelectEmailView()
+                    .navigationDestination(isPresented: $canContinue) {
+                        SelectEmailView(isLoggedIn: $isLoggedIn)
                     }
                 }
-                .onAppear {
-                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
-                        isLoggedIn = true
-                    }
-                }
+//                .onAppear {
+//                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
+//                    }
+//                }
                 .padding(50)
             }
             .ignoresSafeArea()
         }
+        .tint(.primary_green)
     }
 }
 
+struct TitleView: View {
+    @Binding var isLoggedIn: Bool
+    
+    var body: some View {
+        ZStack {
+            HStack {
+                Image.logo
+            }
+            if isLoggedIn {
+                HStack {
+                    Spacer()
+                    Image.profile
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50)
+                        .padding(.trailing, 20)
+                }
+            }
+        }
+    }
+}
 
 #Preview {
     SelectNameView()

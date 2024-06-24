@@ -16,24 +16,20 @@ struct SelectEmailView: View {
 //    @State private var firstName = ""
     @State private var lastName = ""
     @State private var email = ""
-    @State private var isLoggedIn = false
+    @Binding var isLoggedIn: Bool
+    @State private var canContinue = false
     private let firstName = UserDefaults.standard.object(forKey: kFirstName) as? String ?? "first_name"
+    
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.secondary_white
-                
-                VStack {
-                    Image.logo
-                        .padding(.top, 100)
-                    Spacer()
-                }
                 VStack {
 //                    TextField("First Name", text: $firstName)
 //                        .textFieldStyle(.roundedBorder)
 //                    TextField("Last Name", text: $lastName)
 //                        .textFieldStyle(.roundedBorder)
                     Text("Hi \(firstName), please share your email address")
+                        .sectionCategory()
                     TextField("Email", text: $email)
                         .textFieldStyle(.roundedBorder)
                     Button {
@@ -42,7 +38,7 @@ struct SelectEmailView: View {
 //                            UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
 //                            UserDefaults.standard.set(true, forKey: Self.kIsLoggedIn)
-                            isLoggedIn = true
+                            canContinue = true
                         }
                     } label: {
                         Text("Next")
@@ -53,15 +49,15 @@ struct SelectEmailView: View {
                                 RoundedRectangle(cornerRadius: 5)
                             )
                     }
-                    .navigationDestination(isPresented: $isLoggedIn) {
-                        Onboarding()
+                    .navigationDestination(isPresented: $canContinue) {
+                        Onboarding(isLoggedIn: $isLoggedIn)
                     }
                 }
-                .onAppear {
-                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
-                        isLoggedIn = true
-                    }
-                }
+//                .onAppear {
+//                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
+//                        isLoggedIn = true
+//                    }
+//                }
                 .padding(50)
             }
             .ignoresSafeArea()
@@ -70,5 +66,5 @@ struct SelectEmailView: View {
 }
 
 #Preview {
-    SelectEmailView()
+    SelectEmailView(isLoggedIn: .constant(false))
 }
