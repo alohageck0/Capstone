@@ -36,11 +36,26 @@ struct Menu: View {
                             .clipped()
                             .padding(.trailing, 25)
                     }
-                    TextField("Search dish", text: $searchText)
-                        .textFieldStyle(.roundedBorder)
-                        .padding(25)
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                        
+                        TextField("search dish", text: $searchText)
+                        .foregroundColor(.primary_green)
+                        
+                        Button(action: {
+                            self.searchText = ""
+                        }) {
+                            Image(systemName: "xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
+                        }
+                    }
+                    .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
+                    .foregroundColor(.primary_green)
+                    .background(.secondary_white)
+                    .cornerRadius(10.0)
+                    .padding(25)
                 }
                 .background(Color.primary_green)
+                
                 VStack {
                     HStack(spacing: 0) {
                         Text("Chicago")
@@ -53,6 +68,7 @@ struct Menu: View {
                     Spacer()
                 }
             }
+            
             MenuBreakdownView()
                 .padding(.horizontal, 25)
             
