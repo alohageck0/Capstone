@@ -7,9 +7,20 @@
 
 import SwiftUI
 
+public enum DishCategory: String, Codable  {
+    case starters
+    case mains
+    case desserts
+    case drinks
+    case none
+}
+
+
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var searchText = ""
+    @State private var selectedCategory: DishCategory = .none
+//    @State private var isCategorySelected = false
     
     var body: some View {
         VStack {
@@ -69,7 +80,7 @@ struct Menu: View {
                 }
             }
             
-            MenuBreakdownView()
+            MenuBreakdownView(selectedCategory: $selectedCategory)
                 .padding(.horizontal, 25)
             
             FetchedObjects(
@@ -88,6 +99,7 @@ struct Menu: View {
             }
         }
         .onAppear {
+            debugPrint("evv; getMenuData")
             getMenuData()
         }
     }
@@ -116,17 +128,24 @@ struct Menu: View {
     }
     
     func buildPredicate() -> NSPredicate {
+        var searchPredicate: NSPredicate
+        var filterPrecicate: NSPredicate
         if searchText.isEmpty {
-            return NSPredicate(value: true)
+            searchPredicate = NSPredicate(value: true)
         } else {
-            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+            searchPredicate = NSPredicate(format: "title CONTAINS[cd] %@", searchText)
         }
-        
+        if selectedCategory == .none {
+            filterPrecicate = NSPredicate(value: true)
+        } else {
+            filterPrecicate = NSPredicate(format: "dishCategory CONTAINS[cd] %@", selectedCategory.rawValue)
+        }
+        return NSCompoundPredicate(andPredicateWithSubpredicates: [searchPredicate, filterPrecicate])
     }
 }
 
 struct MenuBreakdownView: View {
-    private var menuCategories = ["Starters", "Mains", "Desserts", "Drinks"]
+    @Binding var selectedCategory: DishCategory
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -138,10 +157,30 @@ struct MenuBreakdownView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                  CategoryView(title: "Starters")
-                  CategoryView(title: "Mains")
-                  CategoryView(title: "Desserts")
-                  CategoryView(title: "Drinks")
+                    CategoryView(category: .starters, selectedCategory: $selectedCategory)
+                        .onTapGesture {
+                            withAnimation {
+                                selectedCategory = selectedCategory == .starters ? .none : .starters
+                            }
+                        }
+                  CategoryView(category: .mains, selectedCategory: $selectedCategory)
+                        .onTapGesture {
+                            withAnimation {
+                                selectedCategory = selectedCategory == .mains ? .none : .mains
+                            }
+                        }
+                  CategoryView(category: .desserts, selectedCategory: $selectedCategory)
+                        .onTapGesture {
+                            withAnimation {
+                                selectedCategory = selectedCategory == .desserts ? .none : .desserts
+                            }
+                        }
+                  CategoryView(category: .drinks, selectedCategory: $selectedCategory)
+                        .onTapGesture {
+                            withAnimation {
+                                selectedCategory = selectedCategory == .drinks ? .none : .drinks
+                            }
+                        }
                 }
             }
             Divider()
@@ -151,15 +190,20 @@ struct MenuBreakdownView: View {
 }
 
 struct CategoryView: View {
-    let title: String
+    let category: DishCategory
+    @Binding var selectedCategory: DishCategory
+    
+    var isSelected: Bool {
+        category == selectedCategory
+    }
     
     var body: some View {
-        Text(title)
+        Text(category.rawValue.capitalized)
             .sectionCategory()
-            .foregroundColor(.primary_green)
+            .foregroundColor(isSelected ? .primary_yellow : .primary_green)
             .padding(.vertical, 5)
             .padding(.horizontal, 10)
-            .background(.secondary_white)
+            .background(isSelected ? .primary_green : .secondary_white)
             .clipShape(
                 RoundedRectangle(cornerRadius: 10)
             )

@@ -2,7 +2,7 @@
 //  Dish+CoreDataProperties.swift
 //  Capstone
 //
-//  Created by Evgenii Iavorovich on 6/21/24.
+//  Created by Evgenii Iavorovich on 6/25/24.
 //
 //
 
@@ -21,15 +21,19 @@ extension Dish {
     @NSManaged public var title: String?
     @NSManaged public var uuid: UUID?
     @NSManaged public var itemDescription: String?
+    @NSManaged public var dishCategory: String?
 
     static func createDishesFrom(menuItems:[MenuItem], _ context: NSManagedObjectContext) {
+        debugPrint("evv createDishesFrom")
         for menuItem in menuItems {
+            debugPrint("evv menuItem: \(menuItem)")
             if !(exists(title: menuItem.title, context) ?? false) {
                 let oneDish = Dish(context: context)
                 oneDish.title = menuItem.title
                 oneDish.price = menuItem.price
                 oneDish.image = menuItem.image
                 oneDish.itemDescription = menuItem.description
+                oneDish.dishCategory = menuItem.category
             }
         }
     }

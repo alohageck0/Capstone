@@ -91,8 +91,8 @@
 		7EBE6D232C1019F30040D412 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7EFEF0882C1BB6C3003E0D59 /* SelectNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNameView.swift; sourceTree = "<group>"; };
 		7EFEF08A2C1BB751003E0D59 /* SelectEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmailView.swift; sourceTree = "<group>"; };
-		7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataClass.swift"; path = "Capstone/Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Dish+CoreDataProperties.swift"; path = "Capstone/Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +137,8 @@
 		7E48CA0D2C17F67D0090CA2A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */,
+				7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */,
 				7E48CA0E2C17F6870090CA2A /* FetchedObjects.swift */,
 				7E48CA0F2C17F6870090CA2A /* Persistence.swift */,
 				7E48CA122C17F7160090CA2A /* DataModel.swift */,
@@ -148,8 +150,6 @@
 		7EBE6CD92BF657610040D412 = {
 			isa = PBXGroup;
 			children = (
-				7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */,
-				7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */,
 				7EBE6CE42BF657610040D412 /* Capstone */,
 				7EBE6CFA2BF657630040D412 /* CapstoneTests */,
 				7EBE6D042BF657630040D412 /* CapstoneUITests */,
