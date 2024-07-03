@@ -20,7 +20,6 @@ struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var searchText = ""
     @State private var selectedCategory: DishCategory = .none
-//    @State private var isCategorySelected = false
     
     var body: some View {
         VStack {

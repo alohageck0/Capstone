@@ -11,7 +11,6 @@ struct Home: View {
     let persistenceController = PersistenceController.shared
     
     var body: some View {
-//        TitleView(isLoggedIn: true)
         TabView {
             Menu()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)

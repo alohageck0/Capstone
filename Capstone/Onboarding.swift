@@ -13,9 +13,6 @@ let kEmail = "email key"
 
 struct Onboarding: View {
     static let kIsLoggedIn = "kIsLoggedIn"
-//    private let firstName = UserDefaults.standard.object(forKey: kFirstName) as? String ?? "Empty first name"
-//    private let lastName = UserDefaults.standard.object(forKey: kLastName) as? String ?? "Empty last name"
-//    private let email = UserDefaults.standard.object(forKey: kEmail) as? String ?? "Empty email"
     @State var isLoggedIn = false
     
     @State private var firstName = ""
@@ -27,13 +24,6 @@ struct Onboarding: View {
             .frame(height: 50)
         NavigationStack {
             ZStack {
-//                Color.secondary_white
-//                
-//                VStack {
-//                    Image.logo
-//                        .padding(.top, 80)
-//                    Spacer()
-//                }
                 VStack {
                     Text("What's your name and email?")
                         .sectionCategory()
@@ -43,17 +33,6 @@ struct Onboarding: View {
                         .textFieldStyle(.roundedBorder)
                     TextField("Email", text: $email)
                         .textFieldStyle(.roundedBorder)
-//                    Text("Review your input")
-//                        .sectionCategory()
-//                    Text(firstName)
-//                        .sectionTitle()
-//                        .foregroundStyle(.secondary_black)
-//                    Text(lastName)
-//                        .sectionTitle()
-//                        .foregroundStyle(.secondary_black)
-//                    Text(email)
-//                        .sectionTitle()
-//                        .foregroundStyle(.secondary_black)
                     Button {
                         if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
                             UserDefaults.standard.set(firstName, forKey: kFirstName)
