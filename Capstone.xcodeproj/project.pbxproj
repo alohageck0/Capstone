@@ -38,6 +38,8 @@
 		7EFEF08B2C1BB751003E0D59 /* SelectEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF08A2C1BB751003E0D59 /* SelectEmailView.swift */; };
 		7EFEF0922C262D59003E0D59 /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */; };
 		7EFEF0932C262D59003E0D59 /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */; };
+		AE0C4242A549454C61CF2975 /* wireframe2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0C41EC86057AD883EE1047 /* wireframe2.png */; };
+		AE0C4D6EE447FD3AE83D3BC4 /* wireframe1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0C410379B65719F4133407 /* wireframe1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		7EFEF08A2C1BB751003E0D59 /* SelectEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmailView.swift; sourceTree = "<group>"; };
 		7EFEF0902C262D59003E0D59 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7EFEF0912C262D59003E0D59 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AE0C410379B65719F4133407 /* wireframe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wireframe1.png; sourceTree = "<group>"; };
+		AE0C41EC86057AD883EE1047 /* wireframe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wireframe2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				7EBE6CFA2BF657630040D412 /* CapstoneTests */,
 				7EBE6D042BF657630040D412 /* CapstoneUITests */,
 				7EBE6CE32BF657610040D412 /* Products */,
+				AE0C41EC86057AD883EE1047 /* wireframe2.png */,
+				AE0C410379B65719F4133407 /* wireframe1.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +346,8 @@
 				7E48CA032C1122650090CA2A /* MarkaziText-SemiBold.ttf in Resources */,
 				7E48CA062C1122650090CA2A /* MarkaziText-Regular.ttf in Resources */,
 				7EBE6CEA2BF657630040D412 /* Assets.xcassets in Resources */,
+				AE0C4242A549454C61CF2975 /* wireframe2.png in Resources */,
+				AE0C4D6EE447FD3AE83D3BC4 /* wireframe1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
