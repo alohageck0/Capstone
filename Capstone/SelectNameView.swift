@@ -52,10 +52,12 @@ struct SelectNameView: View {
                         SelectEmailView(isLoggedIn: $isLoggedIn)
                     }
                 }
-//                .onAppear {
-//                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
-//                    }
-//                }
+                .onAppear {
+                    if UserDefaults.standard.bool(forKey: Self.kIsLoggedIn) {
+                        debugPrint("evv kIsLoggedIn")
+                        isLoggedIn = true
+                    }
+                }
                 .padding(50)
             }
             .ignoresSafeArea()

@@ -11,6 +11,7 @@ import SwiftUI
 struct CapstoneApp: App {
     let persistenceController = PersistenceController.shared
     
+    
     var body: some Scene {
         WindowGroup {
             SelectNameView()

@@ -37,7 +37,7 @@ struct SelectEmailView: View {
 //                            UserDefaults.standard.set(firstName, forKey: kFirstName)
 //                            UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
-//                            UserDefaults.standard.set(true, forKey: Self.kIsLoggedIn)
+                            UserDefaults.standard.set(true, forKey: Self.kIsLoggedIn)
                             canContinue = true
                         }
                     } label: {
